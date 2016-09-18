@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:showIn="@layout/activity_activity_two"
+        tools:context="com.example.ufoma.myapplication.ActivityTwo"
+        android:padding="0dp" android:background="#f08557">
+
+
+    <Button
+            android:layout_width="90sp"
+            android:layout_height="75sp"
+            android:text="AC"
+            android:id="@+id/btnCleaner"
+            android:textColor="#ffffff" android:textSize="34sp" android:textStyle="bold"
+            android:background="#f08557"
+            android:onClick="onClickClear"
+            android:layout_above="@+id/btn7" android:layout_alignParentStart="true" android:allowUndo="false"/>
+
+    <Button android:layout_width="90sp" android:layout_height="65sp" android:text="+/-" android:id="@+id/btnPlusMinus"
+            android:textColor="#ffffff" android:textSize="35sp" android:textStyle="bold"
+            android:background="#4447a1"
+            android:onClick="plusMinus"
+            android:layout_above="@+id/btn8" android:layout_toEndOf="@+id/btnCleaner"
+            android:layout_alignTop="@+id/btnCleaner"/>
+    <Button android:layout_width="90sp" android:layout_height="70sp" android:text="√" android:id="@+id/btnSqrt"
+            android:textColor="#ffffff" android:textSize="35sp" android:textStyle="bold"
+            android:background="#4447a1"
+            android:onClick="Sqrt"
+            android:layout_above="@+id/btn9" android:layout_toEndOf="@+id/btnPlusMinus"
+            android:layout_alignTop="@+id/btnPlusMinus"/>
+    <Button android:layout_width="90sp" android:layout_height="75sp" android:text="7" android:id="@+id/btn7"
+            android:textColor="#000000" android:textSize="35sp" android:textStyle="bold"
+            android:background="#8b9bff"
+            android:onClick="onClickNumber"
+            android:allowUndo="false"
+            android:layout_above="@+id/btn5" android:layout_alignParentStart="true"
+            android:singleLine="false" android:contextClickable="false" android:clickable="false"
+    />
+    <Button android:layout_width="90sp" android:layout_height="75sp" android:text="1" android:id="@+id/btn1"
+            android:textSize="35sp" android:textStyle="bold"
+            android:background="#8b9bff"
+            android:onClick="onClickNumber"
+            android:allowUndo="false"
+            android:layout_above="@+id/btn0" android:layout_alignParentStart="true"/>
+    <Button android:layout_width="90sp" android:layout_height="75sp" android:text="0" android:id="@+id/btn0"
+            android:textColor="#000000" android:textSize="35sp" android:textStyle="bold"
+            android:background="#8b9bff"
+            android:onClick="onClickNumber"
+            android:layout_alignParentBottom="true" android:layout_toStartOf="@+id/btnPoint"/>
+    <Button android:layout_width="90sp" android:layout_height="75sp" android:text="8" android:id="@+id/btn8"
+            android:textColor="#000000" android:textSize="35sp" android:textStyle="bold"
+            android:textColorHighlight="#440e6d" android:background="#8b9bff"
+            android:onClick="onClickNumber"
+            android:allowUndo="false"
+            android:layout_alignTop="@+id/btn7" android:layout_toEndOf="@+id/btn7"/>
+    <Button android:layout_width="82sp" android:layout_height="70sp" android:text="÷" android:id="@+id/btnDiv"
+            android:textColor="#ffffff" android:textSize="35sp" android:textStyle="bold"
+            android:background="#4447a1"
+            android:onClick="onClickOperator"
+            android:layout_alignParentEnd="false"
+            android:layout_alignTop="@+id/btnSqrt"
+            android:layout_toEndOf="@+id/btnSqrt" android:layout_above="@+id/btnMult"/>
+    <Button android:layout_width="82sp" android:layout_height="75sp" android:text="-" android:id="@+id/btnMinus"
+            android:textColor="#ffffff" android:textSize="35sp" android:textStyle="bold"
+            android:background="#4447a1"
+            android:onClick="onClickOperator"
+            android:layout_above="@+id/btnPlus"
+            android:layout_alignStart="@+id/btnMult"/>
+    <Button android:layout_width="82sp" android:layout_height="75sp" android:text="+" android:id="@+id/btnPlus"
+            android:textColor="#ffffff" android:textSize="35sp" android:textStyle="bold"
+            android:background="#4447a1"
+            android:onClick="onClickOperator"
+            android:layout_above="@+id/btnEqls"
+            android:layout_alignStart="@+id/btnMinus" android:layout_alignTop="@+id/btn1"/>
+    <Button android:layout_width="82sp" android:layout_height="75sp" android:text="=" android:id="@+id/btnEqls"
+            android:textColor="#ffffff" android:textSize="35sp" android:textStyle="bold"
+            android:background="#4447a1"
+            android:onClick="onClickEqual"
+            android:layout_alignParentBottom="true" android:layout_toEndOf="@+id/btnPoint"/>
+    <Button android:layout_width="82sp" android:layout_height="75sp" android:text="x" android:id="@+id/btnMult"
+            android:textColor="#ffffff" android:textSize="25sp" android:textStyle="bold"
+            android:background="#4447a1"
+            android:onClick="onClickOperator"
+            android:layout_alignEnd="@+id/btnDiv" android:layout_above="@+id/btnMinus"
+            android:layout_toEndOf="@+id/btnSqrt" android:layout_alignParentEnd="false"/>
+    <TextView android:layout_width="370sp" android:layout_height="189sp" android:id="@+id/textView"
+              android:background="#6b2f9a"
+              android:gravity="bottom|right" android:textColor="#ffffff"
+              android:textSize="50sp"
+              android:textIsSelectable="false"
+              android:padding="0dp" android:text="0"
+              android:numeric="integer"
+              android:textStyle="bold"
+              android:layout_alignParentStart="true"
+              android:layout_alignParentTop="true" android:layout_above="@+id/btnCleaner"
+              android:layout_alignParentEnd="true"/>
+    <Button android:layout_width="90sp" android:layout_height="75sp" android:text="." android:id="@+id/btnPoint"
+            android:textColor="#000000" android:textSize="35sp" android:textStyle="bold" android:background="#8b9bff"
+            android:onClick="onClickPoint"
+            android:layout_below="@+id/btnPlus" android:layout_toStartOf="@+id/btnPlus"/>
+    <Button android:layout_width="90sp" android:layout_height="75sp" android:text="3" android:id="@+id/btn3"
+            android:textSize="35sp" android:textStyle="bold" android:background="#8b9bff"
+            android:onClick="onClickNumber" android:allowUndo="false"
+            android:layout_below="@+id/btn6" android:layout_toEndOf="@+id/btn2"/>
+    <Button android:layout_width="90sp" android:layout_height="75sp" android:text="6" android:id="@+id/btn6"
+            android:textSize="35sp" android:textStyle="bold" android:background="#8b9bff"
+            android:onClick="onClickNumber" android:allowUndo="false"
+            android:layout_above="@+id/btnPlus" android:layout_alignStart="@+id/btn3"/>
+    <Button android:layout_width="90sp" android:layout_height="75sp" android:text="9" android:id="@+id/btn9"
+            android:textSize="35sp" android:textStyle="bold" android:background="#8b9bff"
+            android:onClick="onClickNumber" android:allowUndo="false"
+            android:layout_below="@+id/btnPlusMinus" android:layout_toEndOf="@+id/btnPlusMinus"/>
+    <Button android:layout_width="90sp" android:layout_height="75sp" android:text="2" android:id="@+id/btn2"
+            android:textSize="35sp" android:textStyle="bold" android:background="#8b9bff"
+            android:onClick="onClickNumber" android:allowUndo="false"
+            android:layout_above="@+id/btn0" android:layout_toStartOf="@+id/btnSqrt"/>
+    <Button android:layout_width="90sp" android:layout_height="75sp" android:text="5" android:id="@+id/btn5"
+            android:textColor="#000000" android:textSize="35sp" android:textStyle="bold"
+            android:textColorHighlight="#440e6d" android:background="#8b9bff" android:onClick="onClickNumber"
+            android:allowUndo="false" android:layout_above="@+id/btn1" android:layout_toEndOf="@+id/btn1"/>
+    <Button android:layout_width="90sp" android:layout_height="75sp" android:text="4" android:id="@+id/btn4"
+            android:textColor="#000000" android:textSize="35sp" android:textStyle="bold"
+            android:textColorHighlight="#440e6d" android:background="#8b9bff" android:onClick="onClickNumber"
+            android:allowUndo="false" android:layout_above="@+id/btn1" android:layout_alignParentStart="true"/>
+    <Button android:layout_width="90sp" android:layout_height="75sp" android:text="&lt;-" android:id="@+id/btnClear"
+            android:textColor="#000000" android:textSize="35sp" android:textStyle="bold" android:background="#8b9bff"
+            android:onClick="backSpace" android:layout_alignParentBottom="true" android:layout_alignParentStart="true"/>
+    <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/switch2"
+            android:checked="false" android:textSize="15dp"
+            android:background="#4447a1" android:layout_alignParentTop="true" android:layout_alignParentStart="true"/>
+
+</RelativeLayout>
